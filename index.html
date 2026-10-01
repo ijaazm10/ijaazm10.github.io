@@ -1,166 +1,611 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Ijaaz-Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ijaaz Muhammed Mullamangalam</title>
+<meta name="description" content="Ijaaz Muhammed Mullamangalam: Product Owner and Requirements Engineer. Extended-warranty insurance platform at Mercedes-Benz Insurance Services, QA for London Stock Exchange Group, M.Sc. thesis on LLMs for requirements traceability.">
+<meta property="og:title" content="Ijaaz Muhammed Mullamangalam">
+<meta property="og:description" content="Product Owner and Requirements Engineer based in Germany.">
+<meta property="og:image" content="https://ijaazm10.github.io/images/working.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ffb547'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='800' font-size='30' fill='%231a1204'%3EIM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=JetBrains+Mono:wght@400;500;600&family=Onest:wght@400;500;600;700&display=swap">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+/* Layout: dark-first product portfolio. Hero = thesis line + an acceptance-criteria card; then the lifecycle Ijaaz worked on, drawn as a flow with happy and unhappy paths; then timeline, case notes, research, projects, credentials, contact. Single 1120px column, sections breathe on a petrol ground with one amber signal colour. */
+:root{
+  --bg:#0d1719; --bg-2:#122125; --surface:#16292d; --line:#24403f;
+  --fg:#e8efec; --muted:#9db3ad; --faint:#6f8a84;
+  --accent:#ffb547; --accent-ink:#1a1204; --accent-soft:rgba(255,181,71,.14);
+  --cool:#7fd1c7; --cool-soft:rgba(127,209,199,.12);
+  --bad:#ff8a7a; --bad-soft:rgba(255,138,122,.12);
+  --glow-a:rgba(255,181,71,.22); --glow-b:rgba(127,209,199,.18);
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --radius:14px;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f3f6f4; --bg-2:#e8eeeb; --surface:#ffffff; --line:#cfdbd6;
+    --fg:#0f1f22; --muted:#46605b; --faint:#6c847f;
+    --accent:#b86a00; --accent-ink:#ffffff; --accent-soft:rgba(184,106,0,.10);
+    --cool:#1f7a70; --cool-soft:rgba(31,122,112,.10);
+    --bad:#b8402f; --bad-soft:rgba(184,64,47,.09);
+    --glow-a:rgba(255,181,71,.30); --glow-b:rgba(127,209,199,.30);
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#f3f6f4; --bg-2:#e8eeeb; --surface:#ffffff; --line:#cfdbd6;
+  --fg:#0f1f22; --muted:#46605b; --faint:#6c847f;
+  --accent:#b86a00; --accent-ink:#ffffff; --accent-soft:rgba(184,106,0,.10);
+  --cool:#1f7a70; --cool-soft:rgba(31,122,112,.10);
+  --bad:#b8402f; --bad-soft:rgba(184,64,47,.09);
+  --glow-a:rgba(255,181,71,.30); --glow-b:rgba(127,209,199,.30);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;margin:0;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,32px)}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4.2vw,46px);font-weight:700}
+h3{font-size:21px;font-weight:650;letter-spacing:-.01em}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.lede{color:var(--muted);max-width:62ch;font-size:18px}
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:18px}
+.mono-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-size:15px;font-weight:800;letter-spacing:-.04em}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--fg)}
+.theme-btn{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:7px 12px;font:500 13px var(--body);cursor:pointer;display:flex;align-items:center;gap:8px}
+.theme-btn:hover{border-color:var(--accent)}
+@media (max-width:760px){.nav ul{display:none}}
 
-				<!-- Intro -->
-					<div id="intro">
-						
-						<h1>Ijaaz's Portfolio</h1>
-						<p>Welcome to my portfolio! I am a motivated and detail-oriented Digital Engineering student based in Magdeburg, Germany. My passion lies in leveraging data to drive product development and enhance user experiences. With a strong foundation in data analysis, product management, and agile project management, I have honed my skills through both academic projects and professional experience. My expertise spans various tools and technologies including Python, SQL, Tableau, Power BI, Looker Studio, C++, and Google Cloud Platform.
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:clamp(56px,9vw,110px) clamp(48px,7vw,84px)}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:120%;background:
+  radial-gradient(38% 42% at 78% 30%,var(--glow-a),transparent 70%),
+  radial-gradient(34% 40% at 12% 80%,var(--glow-b),transparent 70%);pointer-events:none;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-3%,2%,0)}}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+.hero-copy{min-width:0;display:flex;flex-direction:column;gap:22px}
+.status{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;font-size:14px;color:var(--fg);background:var(--surface);border:1px solid var(--line);padding:7px 14px 7px 10px;border-radius:999px}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--cool);box-shadow:0 0 0 4px var(--cool-soft)}
+.hero h1{font-size:clamp(38px,5.6vw,68px);font-weight:800;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .who{font-size:19px;color:var(--muted);max-width:56ch}
+.hero .who b{color:var(--fg);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;font-weight:600;font-size:15.5px;text-decoration:none;border:1px solid var(--line);background:var(--surface);transition:transform .15s ease,border-color .15s ease}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 
-							Through this portfolio, I aim to showcase my diverse skill set and the impactful projects I have worked on. Explore my work to see how I transform complex data into actionable insights and contribute to innovative solutions.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+.hero-side{min-width:0;display:grid;gap:16px;justify-items:end}
+.portrait{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px 16px 12px 12px;justify-self:start;margin-left:8%}
+.portrait img{width:64px;height:64px;border-radius:14px;object-fit:cover;object-position:50% 20%}
+.portrait strong{display:block;font-family:var(--display);font-size:16px}
+.portrait span{font-size:13.5px;color:var(--muted)}
+.story{width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.55);transform:rotate(1.2deg)}
+.story-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--faint)}
+.story-top b{color:var(--accent);font-weight:600}
+.story pre{margin:0;padding:16px 18px 18px;font-family:var(--mono);font-size:13.5px;line-height:1.75;white-space:pre-wrap;color:var(--fg);overflow-x:auto}
+.story pre .k{color:var(--accent);font-weight:600}
+.story pre .c{color:var(--faint)}
+.story pre .line{display:block;animation:rise .5s both}
+.story pre .line:nth-child(2){animation-delay:.08s}.story pre .line:nth-child(3){animation-delay:.16s}.story pre .line:nth-child(4){animation-delay:.24s}.story pre .line:nth-child(5){animation-delay:.32s}.story pre .line:nth-child(6){animation-delay:.4s}.story pre .line:nth-child(7){animation-delay:.48s}.story pre .line:nth-child(8){animation-delay:.56s}
+@keyframes rise{from{transform:translateY(6px)}to{transform:none}}
+@media (max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero-side{justify-items:stretch}.portrait{margin-left:0}.story{transform:none}}
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Explore</a>
-					</header>
+/* strip */
+.strip{border-block:1px solid var(--line);background:var(--bg-2)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.strip .wrap>div{padding:18px 18px 18px 0;display:flex;flex-direction:column;gap:2px;min-width:0}
+.strip .wrap>div+div{padding-left:18px;border-left:1px solid var(--line)}
+.strip b{font-family:var(--display);font-size:17px;font-weight:650}
+.strip span{font-size:13.5px;color:var(--muted)}
+@media (max-width:760px){.strip .wrap{grid-template-columns:1fr 1fr}.strip .wrap>div:nth-child(3){padding-left:0;border-left:0}.strip .wrap>div:nth-child(n+3){border-top:1px solid var(--line)}}
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							<li><a href="generic.html">Certifications</a></li>
-				
-						</ul>
-						<ul class="icons">
-		
-							<li><a href="https://www.linkedin.com/in/ijaaz-muhammed/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/ijaazm10" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+section{padding-block:clamp(64px,9vw,112px)}
+.head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,44px)}
 
-				<!-- Main -->
-					<div id="main">
+/* lifecycle flow */
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:step}
+.step{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.step::before{counter-increment:step;content:"Step " counter(step);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.step h3{font-size:18px}
+.step p{font-size:14.5px;color:var(--muted)}
+.step:not(:last-child)::after{content:"";position:absolute;top:50%;right:-12px;width:12px;height:2px;background:var(--line)}
+.step.claim{border-color:var(--accent);background:linear-gradient(180deg,var(--accent-soft),transparent 70%),var(--surface)}
+.paths{margin-top:14px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.path{border-radius:var(--radius);padding:14px 16px;border:1px dashed var(--line);display:flex;flex-direction:column;gap:4px;min-width:0}
+.path b{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.path span{font-size:14.5px;color:var(--muted)}
+.path.ok{background:var(--cool-soft)} .path.ok b{color:var(--cool)}
+.path.no{background:var(--bad-soft)} .path.no b{color:var(--bad)}
+.path.edge{background:var(--accent-soft)} .path.edge b{color:var(--accent)}
+.flow-note{margin-top:18px;font-size:14px;color:var(--faint);max-width:80ch}
+@media (max-width:900px){.flow{grid-template-columns:1fr 1fr}.step::after{display:none}.paths{grid-template-columns:1fr}}
+@media (max-width:480px){.flow{grid-template-columns:1fr}}
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-							
-									<h2><a href="https://github.com/ijaazm10/Consulting-Customer-Retention-for-Mobility-World-Wide">Data Analysis for a Mobility Company</a></h2>
-									<p>Conducted data analysis for a globally operating mobility company to optimize branch performance, visualize business trips, and assess the feasibility of new branch locations.</p>
-								</header>
-								<a href="https://github.com/ijaazm10/Consulting-Customer-Retention-for-Mobility-World-Wide" class="image main"><img src="images/dataanalysis.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/ijaazm10/Consulting-Customer-Retention-for-Mobility-World-Wide" class="button large">View Project</a></li>
-								</ul>
-							</article>
+/* experience timeline */
+.timeline{display:grid;gap:18px}
+.role{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px;padding:26px 0;border-top:1px solid var(--line)}
+.role:last-child{border-bottom:1px solid var(--line)}
+.when{font-family:var(--mono);font-size:13px;color:var(--faint);display:flex;flex-direction:column;gap:6px}
+.when b{font-family:var(--display);font-size:16px;color:var(--fg);font-weight:650}
+.role h3{font-size:24px}
+.role .org{color:var(--muted);margin:4px 0 14px}
+.role ul{margin:0;padding-left:18px;display:grid;gap:8px;color:var(--fg)}
+.role li::marker{color:var(--accent)}
+.role li{padding-left:4px}
+@media (max-width:720px){.role{grid-template-columns:1fr;gap:10px}}
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="https://github.com/ijaazm10/PowerBI-World-Cup-Dashboard-"> FIFA World Cup Data Dashboard</a></h2>
-									</header>
-									<a href="https://github.com/ijaazm10/PowerBI-World-Cup-Dashboard-" class="image fit"><img src="images/fifaworldcup.jpg" alt="" /></a>
-									<p>A Power BI dashboard visualizing FIFA World Cup statistics, including host countries, attendance, winners, and competition metrics.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/ijaazm10/PowerBI-World-Cup-Dashboard-" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-								
-										<h2><a href="https://github.com/ijaazm10/Traffic-Flow-Optimization-for-Stadtplannungsamt-Magdeburg">Traffic Flow Optimization for Magdeburg<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/ijaazm10/Traffic-Flow-Optimization-for-Stadtplannungsamt-Magdeburg" class="image fit"><img src="images/denys-nevozhai-7nrsVjvALnA-unsplash.jpg" alt="" /></a>
-									<p>This project employs a traffic simulation model to analyze and enhance traffic flow in Magdeburg, offering data-driven recommendations to reduce congestion and improve urban traffic management.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/ijaazm10/Traffic-Flow-Optimization-for-Stadtplannungsamt-Magdeburg" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/ijaazm10/line-following-robot">Autonomous Line Following Robot<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/ijaazm10/line-following-robot" class="image fit"><img src="images/dominik-scythe-Sot0f3hQQ4Y-unsplash.jpg" alt="" /></a>
-									<p> A line-following robot project utilizing Lego Mindstorm EV3 and MicroPython to achieve autonomous navigation with enhanced accuracy and efficiency.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/ijaazm10/line-following-robot" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-			
-										<h2><a href="https://github.com/ijaazm10/Tableau-Champions-League-Dashboard">UEFA Champions League Stats Dashboard<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/ijaazm10/Tableau-Champions-League-Dashboard" class="image fit"><img src="images/janosch-diggelmann-Ept2Na00VGY-unsplash.jpg" alt="" /></a>
-									<p>A Tableau dashboard visualizing key statistics from the UEFA Champions League, including club titles, top goal scorers, and match appearances.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/ijaazm10/Tableau-Champions-League-Dashboard" class="button">Full Story</a></li>
-									</ul>
-								</article>
-		
-							</section>
+/* case notes */
+.cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px;min-width:0;transition:border-color .2s ease,transform .2s ease}
+.case:hover{border-color:var(--accent);transform:translateY(-3px)}
+.case .tag{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--cool)}
+.case dl{margin:0;display:grid;gap:10px}
+.case dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.case dd{margin:2px 0 0;font-size:15.5px;color:var(--muted)}
+@media (max-width:760px){.cases{grid-template-columns:1fr}}
 
-						<!-- Footer -->
-							
-					</div>
+/* research */
+.research{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,48px);align-items:start}
+.research .card{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:16px;min-width:0}
+.big{font-family:var(--display);font-size:clamp(44px,6vw,64px);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.findings{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.findings li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:15.5px;color:var(--muted)}
+.findings li b{font-family:var(--mono);color:var(--cool);font-weight:600}
+.models{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12.5px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--fg);background:var(--surface)}
+@media (max-width:860px){.research{grid-template-columns:1fr}}
 
-				<!-- Footer -->
-					<footer id="footer">
-						
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Walther Rathenau Str. 58<br />
-								39104, Magdeburg</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">+49-1578 350 2317</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:ijaaz.mullamangalam@st.ovgu.de">ijaaz.mullamangalam@st.ovgu.de</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/ijaaz-muhammed/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/ijaazm10" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					
-								</ul>
-							</section>
-						</section>
-					</footer>
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.project{display:flex;flex-direction:column;gap:10px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--surface);text-decoration:none;min-width:0;transition:border-color .2s ease,transform .2s ease}
+.project:hover{border-color:var(--accent);transform:translateY(-3px)}
+.project .meta{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:12px;color:var(--faint)}
+.project p{font-size:15px;color:var(--muted)}
+.project .go{margin-top:auto;font-size:14px;font-weight:600;color:var(--accent)}
+.project.wide{grid-column:span 2}
+@media (max-width:900px){.projects{grid-template-columns:1fr 1fr}.project.wide{grid-column:span 2}}
+@media (max-width:560px){.projects{grid-template-columns:1fr}.project.wide{grid-column:auto}}
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+/* skills + creds */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px)}
+.skillset{display:grid;gap:18px}
+.skillset>div{display:grid;gap:8px}
+.skillset h3{font-size:16px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.creds{list-style:none;margin:0;padding:0;display:grid}
+.creds li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.creds li:last-child{border-bottom:1px solid var(--line)}
+.creds a{text-decoration:none;font-weight:550}
+.creds a:hover{color:var(--accent)}
+.creds span{font-family:var(--mono);font-size:12.5px;color:var(--faint);white-space:nowrap}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
 
-			</div>
+/* contact */
+.contact{background:var(--bg-2);border-top:1px solid var(--line)}
+.contact-box{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,48px);align-items:end}
+.contact h2{font-size:clamp(34px,5.4vw,60px)}
+.links{display:grid;gap:12px}
+.copyrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.copyrow code{font-family:var(--mono);font-size:14px;user-select:all;word-break:break-all;min-width:0;flex:1}
+.copyrow button{border:1px solid var(--line);background:var(--bg-2);color:var(--fg);border-radius:9px;padding:6px 12px;font:600 13px var(--body);cursor:pointer}
+.copyrow button:hover{border-color:var(--accent)}
+footer{padding-block:28px;font-size:13px;color:var(--faint);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:820px){.contact-box{grid-template-columns:1fr}}
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-	</body>
+/* hero photo */
+.shot{margin:0;position:relative;width:100%;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(0,0,0,.55);transform:rotate(1deg)}
+.shot>img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:62% 45%}
+.shot figcaption{position:absolute;left:14px;bottom:14px;right:14px;display:flex;align-items:center;gap:12px;padding:10px 14px 10px 10px;border-radius:14px;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+.shot figcaption img{width:44px;height:44px;border-radius:10px;object-fit:cover;object-position:50% 20%}
+.shot figcaption strong{display:block;font-family:var(--display);font-size:15px;color:var(--fg)}
+@media (max-width:880px){.shot{transform:none}}
+/* modules */
+.modules{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:12px}
+.module{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.module p{font-size:14.5px;color:var(--muted)}
+.module.lead{border-color:var(--accent);background:linear-gradient(160deg,var(--accent-soft),transparent 60%),var(--surface)}
+.mod-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.route{margin-top:6px;display:grid;gap:10px}
+.route-in{font-family:var(--mono);font-size:12.5px;color:var(--fg);padding:8px 10px;border:1px dashed var(--line);border-radius:10px;text-align:center;position:relative}
+.route-in::after{content:"";position:absolute;left:50%;bottom:-11px;width:2px;height:10px;background:var(--line)}
+.route-out{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.r{font-family:var(--mono);font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--line)}
+.r.ok{background:var(--cool-soft);color:var(--cool)}
+.r.gw{background:var(--accent-soft);color:var(--accent)}
+.uw{margin-top:14px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px;align-items:center;padding:22px;border-radius:18px;background:var(--bg-2);border:1px solid var(--line)}
+.uw-head{display:grid;gap:8px}
+.uw-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:uw}
+.uw-steps li{position:relative;display:flex;flex-direction:column;gap:4px;padding:12px 14px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);min-width:0}
+.uw-steps li::before{counter-increment:uw;content:counter(uw);font-family:var(--mono);font-size:12px;color:var(--accent)}
+.uw-steps li:not(:last-child)::after{content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);color:var(--faint);font-size:13px}
+.uw-steps b{font-family:var(--display);font-size:15.5px;font-weight:650}
+.uw-steps span{font-size:13.5px;color:var(--muted)}
+@media (max-width:980px){.modules{grid-template-columns:1fr 1fr}.module.lead{grid-column:span 2}.uw{grid-template-columns:1fr}}
+@media (max-width:640px){.uw-steps{grid-template-columns:1fr 1fr}.uw-steps li::after{display:none}}
+@media (max-width:480px){.modules{grid-template-columns:1fr}.module.lead{grid-column:auto}.uw-steps{grid-template-columns:1fr}}
+.cases{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+@media (max-width:980px){.cases{grid-template-columns:1fr 1fr!important}}
+@media (max-width:640px){.cases{grid-template-columns:1fr!important}}
+.role li a{color:var(--accent)}
+
+.shot{transform:none}
+.shot>img{border-radius:22px}
+.shot figcaption{position:static;background:none;border:0;backdrop-filter:none;-webkit-backdrop-filter:none;padding:12px 4px 0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--muted)}
+figure.shot{border:0;box-shadow:none;overflow:visible;border-radius:0}
+figure.shot>img{border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(0,0,0,.55)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:12px}
+.stats div{padding:18px 20px;border-radius:var(--radius);background:var(--bg-2);border:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.stats b{font-family:var(--display);font-size:clamp(28px,3.6vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.05;color:var(--fg);font-variant-numeric:tabular-nums}
+.stats div:first-child b{color:var(--accent)}
+.stats span{font-size:14px;color:var(--muted)}
+@media (max-width:640px){.stats{grid-template-columns:1fr}}
+.research .lede+.lede{margin-top:2px}
+.tested{display:grid;gap:10px;margin-top:4px}
+.card .mod-tag{margin-bottom:-4px}
+@media (max-width:640px){.br{display:none}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mono-mark">IM</span>Ijaaz Muhammed</a>
+    <ul>
+      <li><a href="#product">Product</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#cases">Case notes</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch colour theme"><span id="themeIcon">◐</span><span id="themeLabel">Theme</span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="status"><i></i>Open to Product &amp; Requirements roles · Germany / EU</span>
+        <h1 id="hero-title">I turn what users ask for into software that <em>holds up</em> after go-live.</h1>
+        <p class="who"><b>Ijaaz Muhammed Mullamangalam.</b> Product and Requirements professional with experience taking insurance products from requirements through refinement, testing and release at Mercedes-Benz Insurance Services. Previously worked in software QA for London Stock Exchange Group at Cognizant.</p>
+        <div class="cta">
+          <a class="btn primary" href="#product">See my work</a>
+          <a class="btn" href="https://www.linkedin.com/in/ijaaz-muhammed/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/ijaazm10" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <figure class="shot">
+          <img src="images/working.jpg" alt="Ijaaz working on a laptop in front of a large screen showing code" width="900" height="600">
+          <figcaption>Magdeburg, Germany · Open to relocation</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-label="At a glance">
+    <div class="wrap">
+      <div><b>Mercedes-Benz</b><span>Product &amp; Requirements · Insurance</span></div>
+      <div><b>Cognizant / LSEG</b><span>Software QA · Financial technology</span></div>
+      <div><b>M.Sc. Digital Engineering</b><span>OVGU Magdeburg</span></div>
+      <div><b>English C1 · German B1</b><span>Based in Germany</span></div>
+    </div>
+  </div>
+
+  <section id="product" aria-labelledby="product-title">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">The product I worked on</span>
+        <h2 id="product-title">An extended-warranty platform in four modules</h2>
+        <p class="lede">A web-based point-of-sale platform used by dealership staff across international markets to sell and manage extended-warranty contracts. The platform was designed for roughly 240,000 contracts per year. I worked in the product area during the transition from an externally provided sales solution to an in-house platform.</p>
+      </div>
+      <div class="stats" aria-label="Platform at a glance">
+        <div><b>~240,000</b><span>expected contracts per year</span></div>
+        <div><b>4</b><span>product modules</span></div>
+        <div><b>International</b><span>dealer markets</span></div>
+      </div>
+      <div class="modules">
+        <article class="module lead">
+          <span class="mod-tag">Module</span>
+          <h3>New Application</h3>
+          <p>The dealer enters the details, gets a quote and applies for an extended-warranty contract.</p>
+          <div class="route" aria-label="How a new application is routed">
+            <div class="route-in">Entry conditions decide the path</div>
+            <div class="route-out">
+              <span class="r ok">Happy path</span>
+              <span class="r gw">Goodwill path 1</span>
+              <span class="r gw">Goodwill path 2</span>
+            </div>
+          </div>
+        </article>
+        <article class="module">
+          <span class="mod-tag">Module</span>
+          <h3>Retention Management</h3>
+          <p>Extend a contract that is due to expire within the next 60 days.</p>
+        </article>
+        <article class="module">
+          <span class="mod-tag">Module</span>
+          <h3>Contract Management</h3>
+          <p>Change the owner, address or other details, and print the contract.</p>
+        </article>
+        <article class="module">
+          <span class="mod-tag">Module</span>
+          <h3>Claims Notification</h3>
+          <p>Dealership staff register a warranty claim.</p>
+        </article>
+      </div>
+      <div class="uw" aria-labelledby="uw-title">
+        <div class="uw-head">
+          <span class="eyebrow">Inside New Application</span>
+          <h3 id="uw-title">When an offer needs underwriting approval</h3>
+        </div>
+        <ol class="uw-steps">
+          <li><b>Shadow proposal</b><span>A shadow proposal is created for the offer.</span></li>
+          <li><b>Under review</b><span>The proposal screen tells the dealer the request is with underwriting.</span></li>
+          <li><b>Decision</b><span>Underwriting approves or rejects, and the platform receives the decision.</span></li>
+          <li><b>Offer updated</b><span>The offer summary updates to match the decision.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Experience</span>
+        <h2 id="exp-title">Between the business, the developers and production</h2>
+      </div>
+      <div class="timeline">
+        <article class="role">
+          <div class="when"><b>10/2024 to 03/2026</b>Stuttgart, Germany</div>
+          <div>
+            <h3>Product Owner Associate / Requirements Engineer</h3>
+            <p class="org">Mercedes-Benz Insurance Services GmbH · Working Student</p>
+            <ul>
+              <li>Led delivery within the extended-warranty product area in a Scrum team inside SAFe: needs clarification, issue resolution, integration coordination and validation.</li>
+              <li>Co-owned the day-to-day backlog with the Product Owner and took part in PI Planning.</li>
+              <li>First point of contact for international market stakeholders on new and changed requirements; led the clarification sessions.</li>
+              <li>Wrote user stories, acceptance criteria and functional specifications; worked hands-on with REST and SOAP APIs in Postman and Bruno.</li>
+              <li>Supported features through UAT, release validation, go-live and stabilisation.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="role">
+          <div class="when"><b>11/2020 to 08/2022</b>Bangalore, India</div>
+          <div>
+            <h3>Programmer Analyst, Quality Assurance and Test Automation</h3>
+            <p class="org">Cognizant Technology Solutions · Client: London Stock Exchange Group</p>
+            <ul>
+              <li>Tested business-critical financial market-data systems in a Scrum team split between Bangalore and London.</li>
+              <li>Turned requirements into test plans, test cases and test data; validated end-to-end data flows and edge cases.</li>
+              <li>Ran A/B comparative testing of two application versions on stability and user behaviour.</li>
+              <li>Automated tests with Selenium WebDriver, Java and TestNG; reproduced and followed defects to retest.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="role">
+          <div class="when"><b>12/2025 to 07/2026</b>Magdeburg, Germany</div>
+          <div>
+            <h3>Master's Thesis Researcher</h3>
+            <p class="org">ifak Institut für Automation und Kommunikation e.V. · ITEA GENIUS project</p>
+            <ul>
+              <li>Wrote my thesis at ifak in the context of <a href="https://itea4.org/project/genius.html" target="_blank" rel="noopener">GENIUS</a>, the ITEA 4 project on generative AI for the software development life cycle: 32 partners in 9 countries, led by Robin Gröpler at ifak, running from November 2024 to May 2028.</li>
+              <li>Built an evaluation pipeline that tests whether LLMs can find missing links between software requirements, on a benchmark of 42,012 requirement pairs that I rebuilt after finding problems in an earlier dataset.</li>
+              <li>Compared GPT-5.4, Claude Sonnet 4.6 and the open-weight Gemma 4 31B with retrieval and LoRA fine-tuning, measuring precision, recall, F2, latency and output-parsing reliability, with significance tests across projects.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases" aria-labelledby="cases-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Case notes</span>
+        <h2 id="cases-title">Problems I worked on</h2>
+        <p class="lede">Mini case studies from the extended-warranty platform.</p>
+      </div>
+      <div class="cases">
+        <article class="case">
+          <span class="tag">Process</span>
+          <h3>One map of all four modules</h3>
+          <dl>
+            <div><dt>Situation</dt><dd>Four modules, each with its own paths, and the happy path, goodwill paths and underwriting review all branching inside New Application.</dd></div>
+            <div><dt>What I did</dt><dd>Built a full BPMN model of all four modules in Camunda Modeler and documented it so anyone can pick it up later.</dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <span class="tag">Enablement</span>
+          <h3>Handbooks dealers can learn from</h3>
+          <dl>
+            <div><dt>Situation</dt><dd>Dealership staff needed to learn a new platform, module by module.</dd></div>
+            <div><dt>What I did</dt><dd>Wrote a detailed handbook for each of the four modules, and documented the platform in Confluence for the team.</dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <span class="tag">Testing</span>
+          <h3>Test data for every path</h3>
+          <dl>
+            <div><dt>Situation</dt><dd>Goodwill paths are hard to test when nobody has data that triggers them.</dd></div>
+            <div><dt>What I did</dt><dd>Created a test-data set so any team member could test all paths, the happy paths and the goodwill paths.</dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <span class="tag">Automation</span>
+          <h3>A test the business can own</h3>
+          <dl>
+            <div><dt>Situation</dt><dd>A browser-based automated test in Datadog, normally set up by developers.</dd></div>
+            <div><dt>What I did</dt><dd>Learned the setup with developer support, turned business rules into test steps and documented it in Confluence so business colleagues could maintain it.</dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <span class="tag">Performance</span>
+          <h3>A lagging lookup</h3>
+          <dl>
+            <div><dt>Situation</dt><dd>Loading a large CSV of part and damage codes made the dealer interface lag.</dd></div>
+            <div><dt>What I did</dt><dd>Proposed serving it through a CDN. The team adopted it and the interface became more responsive.</dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <span class="tag">Data</span>
+          <h3>Numbers I can explain</h3>
+          <dl>
+            <div><dt>Situation</dt><dd>Stakeholders met weekly to review market quotation and policy-sales figures.</dd></div>
+            <div><dt>What I did</dt><dd>Used Grafana to investigate and present the figures for each market, checking that I could explain the numbers rather than simply repeating a dashboard.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" aria-labelledby="research-title" style="padding-top:0">
+    <div class="wrap research">
+      <div class="head" style="margin:0">
+        <span class="eyebrow">Research</span>
+        <h2 id="research-title">Can AI recover the links that requirements teams miss?</h2>
+        <p class="lede">Software requirements often depend on other requirements, but those relationships can be missing, outdated or never documented. I proposed the research question after seeing how difficult it can be to maintain relationships between changing software requirements in practice: can AI reliably surface those missing connections, and where does it fail?</p>
+        <p class="lede">I turned that into a measurable traceability task and rebuilt the benchmark from raw Jira data across eight open-source projects. The final evaluation contained 42,012 requirement pairs, including 10,503 verified links and 31,509 hard negatives chosen to make the task realistically difficult.</p>
+        <div class="tested">
+          <span class="mod-tag">What I tested</span>
+          <div class="models" aria-label="Models and methods tested">
+            <span class="chip">GPT-5.4</span><span class="chip">Claude Sonnet 4.6</span><span class="chip">Gemma 4 31B</span><span class="chip">Zero-shot</span><span class="chip">RAG</span><span class="chip">LoRA fine-tuning</span><span class="chip">FAISS</span><span class="chip">BM25</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div><div class="big">42,012</div><p style="color:var(--muted)">requirement pairs: 10,503 verified links, 31,509 hard negatives</p></div>
+        <span class="mod-tag">What I learned</span>
+        <ul class="findings">
+          <li><b>01</b><span>Claude Sonnet 4.6 achieved the highest zero-shot macro F2 in my evaluation.</span></li>
+          <li><b>02</b><span>Retrieval improved recall, while fine-tuning shifted performance toward precision.</span></li>
+          <li><b>03</b><span>Combining retrieval and fine-tuning produced the highest macro F2, although the improvement over retrieval alone was not statistically robust across all eight projects.</span></li>
+          <li><b>04</b><span>In five of eight projects, incorrect candidates were semantically more similar to the source requirement than the true linked requirement, showing why similarity alone is not enough.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" aria-labelledby="projects-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Projects</span>
+        <h2 id="projects-title">University and personal projects</h2>
+      </div>
+      <div class="projects">
+        <a class="project wide" href="https://github.com/ijaazm10/Consulting-Customer-Retention-for-Mobility-World-Wide" target="_blank" rel="noopener">
+          <span class="meta"><span>Data Analyst · University customer project</span><span>2024</span></span>
+          <h3>Should we open a branch or keep travelling?</h3>
+          <p>Six SAP S/4HANA and SAP Datasphere datasets combined in BigQuery with Python and Google Maps APIs. A BigQuery ML forecast put the annual running cost of a Garbsen branch at about EUR 153,900, against about EUR 165,400 in recurring travel and hotel costs.</p>
+          <span class="go">View on GitHub ↗</span>
+        </a>
+        <a class="project" href="https://github.com/ijaazm10/Traffic-Flow-Optimization-for-Stadtplannungsamt-Magdeburg" target="_blank" rel="noopener">
+          <span class="meta"><span>With the City Planning Office</span><span>2023</span></span>
+          <h3>Traffic flow in Magdeburg</h3>
+          <p>A broad congestion problem turned into requirements and measurable scenarios in AnyLogic; four alternatives compared with confidence intervals.</p>
+          <span class="go">View on GitHub ↗</span>
+        </a>
+        <a class="project" href="https://github.com/ijaazm10/line-following-robot" target="_blank" rel="noopener">
+          <span class="meta"><span>Scrum Master and developer</span><span>2023</span></span>
+          <h3>Line-following robot</h3>
+          <p>Robot control in MicroPython, built in sprints with iterative testing.</p>
+          <span class="go">View on GitHub ↗</span>
+        </a>
+        <a class="project" href="https://github.com/ijaazm10/PowerBI-World-Cup-Dashboard-" target="_blank" rel="noopener">
+          <span class="meta"><span>Personal project</span><span>Power BI</span></span>
+          <h3>FIFA World Cup dashboard</h3>
+          <p>Goals, matches, attendance, hosts and winners across World Cup history.</p>
+          <span class="go">View on GitHub ↗</span>
+        </a>
+        <a class="project" href="https://github.com/ijaazm10/Tableau-Champions-League-Dashboard" target="_blank" rel="noopener">
+          <span class="meta"><span>Personal project</span><span>Tableau</span></span>
+          <h3>Champions League stats</h3>
+          <p>A Tableau dashboard of UEFA Champions League statistics.</p>
+          <span class="go">View on GitHub ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills-title" style="padding-top:0">
+    <div class="wrap two">
+      <div>
+        <div class="head"><span class="eyebrow">Toolkit</span><h2 id="skills-title">What I work with</h2></div>
+        <div class="skillset">
+          <div><h3>Product and delivery</h3><div class="models"><span class="chip">Backlog refinement</span><span class="chip">User stories</span><span class="chip">Acceptance criteria</span><span class="chip">Scrum</span><span class="chip">SAFe</span><span class="chip">UAT</span><span class="chip">Go-live</span></div></div>
+          <div><h3>Requirements and process</h3><div class="models"><span class="chip">BPMN 2.0</span><span class="chip">Camunda</span><span class="chip">Functional specifications</span><span class="chip">Jira</span><span class="chip">Confluence</span></div></div>
+          <div><h3>Systems and data</h3><div class="models"><span class="chip">REST</span><span class="chip">SOAP</span><span class="chip">Postman</span><span class="chip">Bruno</span><span class="chip">SQL</span><span class="chip">Grafana</span><span class="chip">Datadog</span><span class="chip">Python</span></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="head"><span class="eyebrow">Credentials</span><h2 id="credentials">Selected certificates</h2></div>
+        <ul class="creds">
+          <li><a href="https://www.credly.com/badges/16681c10-22da-4fb6-b0f0-282a83889634" target="_blank" rel="noopener">IBM AI Analyst, Mastery Award ↗</a><span>2019</span></li>
+          <li><a href="https://www.credly.com/badges/26ee4302-b7e7-4300-9d10-3ca4b7066e89" target="_blank" rel="noopener">IBM AI Analyst, Explorer Award ↗</a><span>2019</span></li>
+          <li><a href="https://www.cloudskillsboost.google/public_profiles/250352dd-30c8-4ce7-8157-5369bc4c5724" target="_blank" rel="noopener">Google Cloud Skills Boost badges ↗</a><span>5 badges</span></li>
+          <li><a href="https://www.udemy.com/certificate/UC-801d60cb-6699-44e2-9e83-415237a13a9c/" target="_blank" rel="noopener">The Complete SQL Bootcamp ↗</a><span>Udemy</span></li>
+          <li><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-42623eea-ea7f-4d8f-b9b9-d661b08690ae.pdf" target="_blank" rel="noopener">Relational Database Design ↗</a><span>Udemy</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-box">
+      <div class="head" style="margin:0">
+        <span class="eyebrow">Contact</span>
+        <h2 id="contact-title">Looking for someone who can bridge business and software? Let's talk.</h2>
+        <p class="lede">Available to start immediately and open to relocation within Germany.</p>
+      </div>
+      <div class="links">
+        <div class="copyrow"><code id="mail">ijaaz.mullamangalam@st.ovgu.de</code><button type="button" id="copyBtn">Copy</button></div>
+        <a class="btn" href="https://www.linkedin.com/in/ijaaz-muhammed/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/ijaazm10" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Ijaaz Muhammed Mullamangalam</span><span>Magdeburg, Germany</span></div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn'), lab=document.getElementById('themeLabel');
+  function current(){var t=root.getAttribute('data-theme'); if(t) return t; return window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
+  function paint(){lab.textContent=current()==='dark'?'Light mode':'Dark mode';}
+  try{var saved=localStorage.getItem('im-theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  paint();
+  btn.addEventListener('click',function(){var next=current()==='dark'?'light':'dark'; root.setAttribute('data-theme',next); try{localStorage.setItem('im-theme',next);}catch(e){} paint();});
+  var cb=document.getElementById('copyBtn'), mail=document.getElementById('mail');
+  cb.addEventListener('click',function(){
+    var text=mail.textContent;
+    function sel(){var r=document.createRange(); r.selectNodeContents(mail); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r); cb.textContent='Selected';}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){cb.textContent='Copied';},sel);} else sel();
+    setTimeout(function(){cb.textContent='Copy';},2000);
+  });
+})();
+</script>
+
+</body>
 </html>
